@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<p id="demo"></p>
 <script>
 int name = "ABCD";
 </script>
@@ -21,7 +22,7 @@ body {
 <body>
 <p class="padding">What is your name?</p>
 <script>
-name
+document.getElementById("demo").innerHTML = name;
 </script>
 </body>
 </html>
