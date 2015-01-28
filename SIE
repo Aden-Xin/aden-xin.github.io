@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+int name = "ABCD";
+</script>
+  <title>Welcome to ANERA.</title>
+  <style>
+p.padding {
+  padding-top: 50px;
+  padding-right: 100px;
+  padding-bottom: 25px;
+  padding-left: 50px;
+  font-size: 18px;
+}
+body {
+    background-color: #101010;
+}
+</style>
+</head>
+<body>
+<p class="padding">What is your name?</p>
+<script>
+name
+</script>
+</body>
+</html>
