@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Anera</title>
+body {
+    background-color: #050505;
+    color: #ffffff;
+}
+p.NPC {
+  color: blue;
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
+
+p.STORY {
+  color: White;
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
+
+var Player = {Race:"", Name:"", Tou:10, Str:10, Agi:10, Int:10, MaxHP:3*Player.Tou, MaxMP:3*Player.int}
+
+
+
+</head>
+
+
+<body>
+<p class="STORY">
+  
+  You wake up in a small hut remembering nothing but a name.
+  
+</p>
+<p id="Text"></p>
+
+<p class="NPC">
+
+  <b>Old man:</b> "Are you Ok young traveler? You just fell from the sky.
+
+</p>
+
+document.getElementById("Text").innerHTML = Player.MaxHP;
+
+
+
+</body>
+</html>
