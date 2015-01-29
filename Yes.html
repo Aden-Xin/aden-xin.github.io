@@ -6,7 +6,11 @@
 <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 <title>Anera</title>
 
+
 <style>
+p.A {
+position:fixed; left:84px;
+}
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #050505;
@@ -45,7 +49,7 @@ p.STORY {
 
 <p id="demo"></p>
 
-
+<p class="A">
 <script>
 var Tou = 10;
 var Int = 10;
@@ -54,6 +58,6 @@ var Agi = 10;
 var player = {type:"", tou:Tou, str:Str, agi:Agi, int:Int, maxhp:3 * Tou, maxmp:3 * Int, name:""};
 document.getElementById("demo").innerHTML = player.maxhp;
 </script>
-
+</p>
 </body>
 </html>
