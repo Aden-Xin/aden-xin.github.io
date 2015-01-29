@@ -51,9 +51,12 @@ p.STORY {
 <p id="demo"></p>
 
 <p class="A">
+<button onclick="CharMake()">Try it</button>
 <script>
-var player = new Character({name: prompt("Please enter your name", "Harry Potter"), toughness: 10, strength: 10, intelligence: 10, agility: 10});
+CharMake(){
+var player = new Character({name: prompt("Please enter your name", ""), toughness: 10, strength: 10, intelligence: 10, agility: 10});
 document.getElementById("demo").innerHTML = player.maxhp;
+}
 </script>
 </p>
 </body>
