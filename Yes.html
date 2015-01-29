@@ -4,6 +4,7 @@
 <head>
 
 <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<script src="./main.js"></script>
 <title>Anera</title>
 
 
@@ -51,11 +52,7 @@ p.STORY {
 
 <p class="A">
 <script>
-var Tou = 10;
-var Int = 10;
-var Str = 10;
-var Agi = 10;
-var player = {type:"", tou:Tou, str:Str, agi:Agi, int:Int, maxhp:3 * Tou, maxmp:3 * Int, name:""};
+var player = new Character({name: "Bob", toughness: 10, strength: 10, intelligence: 10, agility: 10});
 document.getElementById("demo").innerHTML = player.maxhp;
 </script>
 </p>
