@@ -24,7 +24,7 @@ p#NPC {
   padding-bottom: 50px;
 }
 
-p.Button {
+p#Button {
   color: #5050ff;
   padding-left: 50px;
   padding-bottom: 50px;
@@ -43,11 +43,13 @@ p#STORY {
 function Yes() {
     document.getElementById("NPC").innerHTML = "I'm Fine.";
     document.getElementById("STORY").innerHTML = "";
+    document.getElementById("Button").innerHTML = "";
 }
 
 function No() {
     document.getElementById("NPC").innerHTML = "No, I can't remember anything, and I have a headache.";
     document.getElementById("STORY").innerHTML = "";
+    document.getElementById("Button").innerHTML = "";
 }
 
 </script>
@@ -70,13 +72,13 @@ function No() {
   
 </p>
  
-<p class="Button">
+<p id="Button">
 
 <button onclick="Yes()">Yes</button>
 
 </p>
 
-<p class="Button">
+<p id="Button">
 
 <button onclick="No()">No</button>
 
