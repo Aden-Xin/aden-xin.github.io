@@ -24,6 +24,12 @@ p#NPC {
   padding-bottom: 50px;
 }
 
+p#PC {
+  color: #5050ff;
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
+
 p#Button {
   color: #5050ff;
   padding-left: 50px;
@@ -40,21 +46,23 @@ p#STORY {
   color: White;
   padding-top: 50px;
   padding-left: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
 }
 </style>
 
 <script>
 
 function Yes() {
-    document.getElementById("NPC").innerHTML = "I'm Fine.";
+    document.getElementById("PC").innerHTML = "I'm Fine.";
+    document.getElementById("NPC").innerHTML = "";
     document.getElementById("STORY").innerHTML = "";
     document.getElementById("Button").innerHTML = "";
     document.getElementById("Button2").innerHTML = "";
 }
 
 function No() {
-    document.getElementById("NPC").innerHTML = "No, I can't remember anything, and I have a headache.";
+    document.getElementById("PC").innerHTML = "No, I can't remember anything, and I have a headache.";
+    document.getElementById("NPC").innerHTML = "";
     document.getElementById("STORY").innerHTML = "";
     document.getElementById("Button").innerHTML = "";
     document.getElementById("Button2").innerHTML = "";
@@ -77,6 +85,12 @@ function No() {
 <p id="NPC">
 
   <b>Old man:</b> "Are you Ok young traveler? You just fell from the sky."
+  
+</p>
+
+<p id="PC">
+
+
   
 </p>
  
