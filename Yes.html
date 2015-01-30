@@ -30,6 +30,12 @@ p#Button {
   padding-bottom: 50px;
 }
 
+p#Button2 {
+  color: #5050ff;
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
+
 p#STORY {
   color: White;
   padding-top: 50px;
@@ -44,12 +50,14 @@ function Yes() {
     document.getElementById("NPC").innerHTML = "I'm Fine.";
     document.getElementById("STORY").innerHTML = "";
     document.getElementById("Button").innerHTML = "";
+    document.getElementById("Button2").innerHTML = "";
 }
 
 function No() {
     document.getElementById("NPC").innerHTML = "No, I can't remember anything, and I have a headache.";
     document.getElementById("STORY").innerHTML = "";
     document.getElementById("Button").innerHTML = "";
+    document.getElementById("Button2").innerHTML = "";
 }
 
 </script>
@@ -78,7 +86,7 @@ function No() {
 
 </p>
 
-<p id="Button">
+<p id="Button2">
 
 <button onclick="No()">No</button>
 
