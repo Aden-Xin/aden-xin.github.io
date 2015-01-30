@@ -37,6 +37,15 @@ p.STORY {
   padding-bottom: 50px;
 }
 </style>
+
+function Yes() {
+    document.getElementById("NPC").innerHTML = "I'm Fine.";
+}
+
+function No() {
+    document.getElementById("NPC").innerHTML = "No, I can't remember anything, and I have a headache.";
+}
+
 </head>
 
 
@@ -57,13 +66,13 @@ p.STORY {
  
 <p class="Button">
 
-<button onclick=<p>I'm fine</p>>Yes</button>
+<button onclick="Yes()">Yes</button>
 
 </p>
 
 <p class="Button">
 
-<button onclick=>No</button>
+<button onclick="No()">No</button>
 
 </p>
 
