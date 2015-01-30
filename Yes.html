@@ -56,16 +56,16 @@ function A-A() {
     document.getElementById("PC").innerHTML = "I'm fine, but I can't remember anything, where are we?";
     document.getElementById("NPC").innerHTML = "";
     document.getElementById("STORY").innerHTML = "";
-    document.getElementById("Button").innerHTML = "";
-    document.getElementById("Button2").innerHTML = "";
+    document.getElementById("A_A").innerHTML = "";
+    document.getElementById("A_B").innerHTML = "";
 }
 
 function A-B() {
     document.getElementById("PC").innerHTML = "No, I can't remember anything, and I have a headache.";
     document.getElementById("NPC").innerHTML = "";
     document.getElementById("STORY").innerHTML = "";
-    document.getElementById("Button").innerHTML = "";
-    document.getElementById("Button2").innerHTML = "";
+    document.getElementById("A_A").innerHTML = "";
+    document.getElementById("A_B").innerHTML = "";
 }
 
 </script>
@@ -74,6 +74,10 @@ function A-B() {
 
 
 <body>
+
+<script>
+var player = new Character({name: prompt("Please enter your name", ""), toughness: 10, strength: 10, intelligence: 10, agility: 10});
+</script>
 
 <p id="STORY">
 
@@ -107,12 +111,6 @@ function A-B() {
 </p>
 
 <p id="demo"></p>
-
-
-
-<script>
-var player = new Character({name: prompt("Please enter your name", ""), toughness: 10, strength: 10, intelligence: 10, agility: 10});
-</script>
 
 </body>
 </html>
