@@ -3,10 +3,13 @@
 
 <head>
 
+<p id="OK">I'm fine.</p>
+
+<p id="Hurt">No, my head hurts and I can't remember anything!</p>
+
 <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 <script src="./main.js"></script>
 <title>Anera</title>
-
 
 <style>
 p.A {
@@ -35,7 +38,9 @@ p.STORY {
 
 
 <body>
+
 <p class="STORY">
+
   
   You wake up in a small hut remembering nothing but a name.
   
@@ -47,7 +52,9 @@ p.STORY {
 
 </p>
 
+<button onclick='getElementById("OK")'>Yes</button>
 
+<button onclick='getElementById("Hurt")'>No</button>
 
 <p id="demo"></p>
 
@@ -55,7 +62,6 @@ p.STORY {
 
 <script>
 var player = new Character({name: prompt("Please enter your name", ""), toughness: 10, strength: 10, intelligence: 10, agility: 10});
-Battle();
 </script>
 
 </body>
