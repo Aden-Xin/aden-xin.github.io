@@ -18,7 +18,7 @@ body {
     color: #ffffff;
 }
 
-p.NPC {
+p#NPC {
   color: #5050ff;
   padding-left: 50px;
   padding-bottom: 50px;
@@ -30,7 +30,7 @@ p.Button {
   padding-bottom: 50px;
 }
 
-p.STORY {
+p#STORY {
   color: White;
   padding-top: 50px;
   padding-left: 50px;
@@ -42,10 +42,12 @@ p.STORY {
 
 function Yes() {
     document.getElementById("NPC").innerHTML = "I'm Fine.";
+    document.getElementById("STORY").innerHTML = "";
 }
 
 function No() {
     document.getElementById("NPC").innerHTML = "No, I can't remember anything, and I have a headache.";
+    document.getElementById("STORY").innerHTML = "";
 }
 
 </script>
@@ -55,14 +57,14 @@ function No() {
 
 <body>
 
-<p class="STORY">
+<p id="STORY">
 
   
   You wake up in a small hut remembering nothing but a name.
   
 </p>
 
-<p class="NPC">
+<p id="NPC">
 
   <b>Old man:</b> "Are you Ok young traveler? You just fell from the sky."
   
