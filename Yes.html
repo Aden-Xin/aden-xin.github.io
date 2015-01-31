@@ -2,7 +2,9 @@
 <html>
 
 <head>
-
+<script>
+    int A = 1;
+</script>
 
 <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 <script src="./main.js"></script>
@@ -65,7 +67,7 @@ function AA() {
     document.getElementById("STORY").innerHTML = "";
     document.getElementById("AA").innerHTML = "";
     document.getElementById("AB").innerHTML = "";
-    document.getElementById("B").style.display = "fixed";
+    A = 2;
 }
 
 function AB() {
@@ -74,7 +76,7 @@ function AB() {
     document.getElementById("STORY").innerHTML = "";
     document.getElementById("AA").innerHTML = "";
     document.getElementById("AB").innerHTML = "";
-    document.getElementById("B").style.display = "fixed";
+    A = 2;
 
 function B(){
     
@@ -122,11 +124,17 @@ var player = new Character({name: prompt("Please enter your name", ""), toughnes
 
 </p>
 
+<script>
+while (A == 2){
+
 <p id="B">
 
 <button onclick="B()">Continue</button>
 
 </p>
+
+}
+</script>
 
 </body>
 </html>
