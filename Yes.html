@@ -52,20 +52,20 @@ p#STORY {
 
 <script>
 
-function A-A() {
+function AA() {
     document.getElementById("PC").innerHTML = "I'm fine, but I can't remember anything, where are we?";
     document.getElementById("NPC").innerHTML = "";
     document.getElementById("STORY").innerHTML = "";
-    document.getElementById("A_A").innerHTML = "";
-    document.getElementById("A_B").innerHTML = "";
+    document.getElementById("AA").innerHTML = "";
+    document.getElementById("AB").innerHTML = "";
 }
 
-function A-B() {
+function AB() {
     document.getElementById("PC").innerHTML = "No, I can't remember anything, and I have a headache.";
     document.getElementById("NPC").innerHTML = "";
     document.getElementById("STORY").innerHTML = "";
-    document.getElementById("A_A").innerHTML = "";
-    document.getElementById("A_B").innerHTML = "";
+    document.getElementById("AA").innerHTML = "";
+    document.getElementById("AB").innerHTML = "";
 }
 
 </script>
@@ -100,13 +100,13 @@ var player = new Character({name: prompt("Please enter your name", ""), toughnes
  
 <p id="Button">
 
-<button onclick="A-A()">Yes</button>
+<button onclick="AA()">Yes</button>
 
 </p>
 
 <p id="Button">
 
-<button onclick="A-B()">No</button>
+<button onclick="AB()">No</button>
 
 </p>
 
