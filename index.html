@@ -10,10 +10,29 @@ p#A {
   text-align: center;
   font-size: 46px;
 }
-div.B {
-  font-size: 24px;
+ul.B {
   display: table;
   margin: 0px auto;
+}
+ul.B li
+{
+  list-style: none;
+  display: inline-table;
+  padding: 0;
+  float: left;
+}
+ul.B li a
+{
+  text-decoration: none;
+  padding: 30px 10px;
+  font-size: 24px;
+  color: #0000ff;
+  transition: color .5s;
+  -webkit-transition: color .5s;
+}
+ul.B li a:hover
+{
+  color: $ffffff;
 }
 body {
     font-family: 'Montserrat', sans-serif;
@@ -30,13 +49,11 @@ body {
 
 </p>
 
-<div class="B">
-
-<a href='game.html'>Game</a>
-<a href='Episodes.html'>          Episodes</a>
-<a href='Contacts.html'>          Contact</a>
-<a href='Store.html'>          Store</a>
-
-</div>
+<ul class="B">
+  <li><a href='game.html'>Game</a></li>
+  <li><a href='Episodes.html'>Episodes</a></li>
+  <li><a href='Contacts.html'>Contact</a></li>
+  <li><a href='Store.html'>Store</a></li>
+</ul>
 </body>
 </html>
