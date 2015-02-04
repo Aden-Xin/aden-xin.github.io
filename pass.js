@@ -1,3 +1,3 @@
-<script>
+function Password(){
   var person = prompt("Password", "");
-</script>
+}
