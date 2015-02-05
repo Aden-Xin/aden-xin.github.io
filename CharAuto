@@ -1,3 +1,0 @@
-CharMake(){
-var player = new Character({name: Name, toughness: Tou, strength: Str, intelligence: Int, agility: Agi});
-}
