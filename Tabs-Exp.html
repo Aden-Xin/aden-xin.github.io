@@ -1,124 +1,131 @@
 <head>
-    <!-- This page is copyright Elated Communications Ltd. (www.elated.com) -->
 
-    <title>JavaScript tabs example</title>
+<title>Anera</title>
 
-    <style type="text/css">
-      body { font-size: 80%; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; }
-      ul#tabs { list-style-type: none; margin: 30px 0 0 0; padding: 0 0 0.3em 0; }
-      ul#tabs li { display: inline; }
-      ul#tabs li a { color: #42454a; background-color: #dedbde; border: 1px solid #c9c3ba; border-bottom: none; padding: 0.3em; text-decoration: none; }
-      ul#tabs li a:hover { background-color: #f1f0ee; }
-      ul#tabs li a.selected { color: #000; background-color: #f1f0ee; font-weight: bold; padding: 0.7em 0.3em 0.38em 0.3em; }
-      div.tabContent { border: 1px solid #c9c3ba; padding: 0.5em; background-color: #f1f0ee; }
-      div.tabContent.hide { display: none; }
-    </style>
+<style type="text/css">
+     body { font-size: 80%; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; }
+     ul#tabs { list-style-type: none; margin: 30px 0 0 0; padding: 0 0 0.3em 0; }
+     ul#tabs li { display: inline; }
+     ul#tabs li a { color: #42454a; background-color: #dedbde; border: 1px solid #c9c3ba; border-bottom: none; padding: 0.3em; text-decoration: none; }
+     ul#tabs li a:hover { background-color: #f1f0ee; }
+     ul#tabs li a.selected { color: #000; background-color: #f1f0ee; font-weight: bold; padding: 0.7em 0.3em 0.38em 0.3em; }
+     div.tabContent { border: 1px solid #c9c3ba; padding: 0.5em; background-color: #f1f0ee; }
+     div.tabContent.hide { display: none; }
+</style>
 
-    <script type="text/javascript">
-    //<![CDATA[
+<script>
 
     var tabLinks = new Array();
     var contentDivs = new Array();
 
     function init() {
 
-      // Grab the tab links and content divs from the page
-      var tabListItems = document.getElementById('tabs').childNodes;
-      for ( var i = 0; i < tabListItems.length; i++ ) {
-        if ( tabListItems[i].nodeName == "LI" ) {
-          var tabLink = getFirstChildWithTagName( tabListItems[i], 'A' );
-          var id = getHash( tabLink.getAttribute('href') );
-          tabLinks[id] = tabLink;
-          contentDivs[id] = document.getElementById( id );
-        }
-      }
 
-      // Assign onclick events to the tab links, and
-      // highlight the first tab
-      var i = 0;
+  var tabListItems = document.getElementById('tabs').childNodes;
+  for ( var i = 0; i < tabListItems.length; i++ ) {
+    if ( tabListItems[i].nodeName == "LI" ) {
+      var tabLink = getFirstChildWithTagName( tabListItems[i], 'A' );
+      var id = getHash( tabLink.getAttribute('href') );
+      tabLinks[id] = tabLink;
+      contentDivs[id] = document.getElementById( id );
+    }
+  }
 
-      for ( var id in tabLinks ) {
-        tabLinks[id].onclick = showTab;
-        tabLinks[id].onfocus = function() { this.blur() };
-        if ( i == 0 ) tabLinks[id].className = 'selected';
-        i++;
-      }
 
-      // Hide all content divs except the first
-      var i = 0;
+  var i = 0;
 
-      for ( var id in contentDivs ) {
-        if ( i != 0 ) contentDivs[id].className = 'tabContent hide';
-        i++;
-      }
+  for ( var id in tabLinks ) {
+    tabLinks[id].onclick = showTab;
+    tabLinks[id].onfocus = function() { this.blur() };
+    if ( i == 0 ) tabLinks[id].className = 'selected';
+      i++;
     }
 
-    function showTab() {
-      var selectedId = getHash( this.getAttribute('href') );
+  var i = 0;
 
-      // Highlight the selected tab, and dim all others.
-      // Also show the selected content div, and hide all others.
-      for ( var id in contentDivs ) {
-        if ( id == selectedId ) {
-          tabLinks[id].className = 'selected';
-          contentDivs[id].className = 'tabContent';
-        } else {
-          tabLinks[id].className = '';
-          contentDivs[id].className = 'tabContent hide';
-        }
-      }
+  for ( var id in contentDivs ) {
+    if ( i != 0 ) contentDivs[id].className = 'tabContent hide';
+    i++;
+  }
+}
 
-      // Stop the browser following the link
-      return false;
+function showTab() {
+  var selectedId = getHash( this.getAttribute('href') );
+
+  for ( var id in contentDivs ) {
+    if ( id == selectedId ) {
+      tabLinks[id].className = 'selected';
+      contentDivs[id].className = 'tabContent';
+    } else {
+      tabLinks[id].className = '';
+      contentDivs[id].className = 'tabContent hide';
     }
+  }
 
-    function getFirstChildWithTagName( element, tagName ) {
-      for ( var i = 0; i < element.childNodes.length; i++ ) {
-        if ( element.childNodes[i].nodeName == tagName ) return element.childNodes[i];
-      }
-    }
+  return false;
+}
 
-    function getHash( url ) {
-      var hashPos = url.lastIndexOf ( '#' );
-      return url.substring( hashPos + 1 );
-    }
+function getFirstChildWithTagName( element, tagName ) {
+  for ( var i = 0; i < element.childNodes.length; i++ ) {
+    if ( element.childNodes[i].nodeName == tagName ) return element.childNodes[i];
+  }
+}
 
-    //]]>
-    </script>
+function getHash( url ) {
+  var hashPos = url.lastIndexOf ( '#' );
+  return url.substring( hashPos + 1 );
+}
+
+</script>
   </head>
   <body onload="init()">
-    <h1>JavaScript tabs example</h1>
+<h1>JavaScript tabs example</h1>
 
-    <ul id="tabs">
-      <li><a href="#about">About JavaScript tabs</a></li>
-      <li><a href="#advantages">Advantages of tabs</a></li>
-      <li><a href="#usage">Using tabs</a></li>
-    </ul>
+<ul id="tabs">
+  <li><a href="#Sone">Season 1</a></li>
+  <li><a href="#Stwo">Season 2</a></li>
+  <li><a href="#Sthree">Season 3</a></li>
+</ul>
 
-    <div class="tabContent" id="about">
-      <h2>About JavaScript tabs</h2>
-      <div>
-        <p>JavaScript tabs partition your Web page content into tabbed sections. Only one section at a time is visible.</p>
-        <p>The code is written in such a way that the page degrades gracefully in browsers that don't support JavaScript or CSS.</p>
-      </div>
-    </div>
+<div class="tabContent" id="Sone">
+  <h2>About JavaScript tabs</h2>
+  <div>
+    <ul class="B">
+  <li><a href='S1E1.html'>Episode 1</a></li>
+  <li><a href='S1E2.html'></a></li>
+  <li><a href='S1E3.html'></a></li>
+  <li><a href='S1E4.html'></a></li>
+  <li><a href='S1E5.html'></a></li>
+  <li><a href='S1E6.html'></a></li>
+</ul>
 
-    <div class="tabContent" id="advantages">
-      <h2>Advantages of tabs</h2>
-      <div>
-        <p>JavaScript tabs are great if your Web page contains a large amount of content.</p>
-        <p>They're also good for things like multi-step Web forms.</p>
-      </div>
-    </div>
+<ul class="B">
+  <li><a href='S1E1.html'></a></li>
+  <li><a href='S1E1.html'></a></li>
+  <li><a href='S1E1.html'></a></li>
+  <li><a href='S1E1.html'></a></li>
+  <li><a href='S1E1.html'></a></li>
+  <li><a href='S1E1.html'></a></li>
+</ul>
+  </div>
+</div>
 
-    <div class="tabContent" id="usage">
-      <h2>Using tabs</h2>
-      <div>
-        <p>Click a tab to view the tab's content. Using tabs couldn't be easier!</p>
-      </div>
-    </div>
+<div class="tabContent" id="Stwo">
+  <h2>Advantages of tabs</h2>
+  <div>
+    <p>JavaScript tabs are great if your Web page contains a large amount of content.</p>
+    <p>They're also good for things like multi-step Web forms.</p>
+  </div>
+</div>
 
-    <p><a href="/articles/javascript-tabs/">Return to the JavaScript Tabs article</a></p>
+<div class="tabContent" id="Sthree">
+  <h2>Using tabs</h2>
+  <div>
+    <p>Click a tab to view the tab's content. Using tabs couldn't be easier!</p>
+  </div>
+</div>
+
+<p><a href="/articles/javascript-tabs/">Return to the JavaScript Tabs article</a></p>
 
   </body>
 </html>
