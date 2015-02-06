@@ -7,7 +7,31 @@ ul.B {
   display: table;
   margin: 128px auto;
 }
-body { font-size: 80%; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; }
+ul.B li
+{
+  list-style: none;
+  display: inline-table;
+  padding: 0;
+  float: left;
+}
+ul.B li a
+{
+  text-decoration: none;
+  padding: 30px 10px;
+  font-size: 24px;
+  color: #0000ff;
+  transition: color 1.5s;
+  -webkit-transition: color 1.5s;
+}
+ul.B li a:hover
+{
+  color: #ffffff;
+}
+body {
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
 ul#tabs { list-style-type: none; margin: 30px 0 0 0; padding: 0 0 0.3em 0; }
 ul#tabs li { display: inline; }
 ul#tabs li a { color: #42454a; background-color: #dedbde; border: 1px solid #c9c3ba; border-bottom: none; padding: 0.3em; text-decoration: none; }
