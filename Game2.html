@@ -2,8 +2,15 @@
 <head>
   <title>Anera</title>
   <script>
-    var YAxis = 10;
-    var XAxis = 10;
+    int GetX(){
+      var XAxis = 10;
+      return XAxis;
+    }
+    
+    int GetY(){
+      var YAxis = 10;
+      return YAxis;
+    }
   </script>
   <style>
     svg#CC{
@@ -12,8 +19,8 @@
       margin-left: -25px;
       margin-top: -25px;
       position: absolute;
-      top: XAxis%;
-      left: YAxis%;
+      top: GetX()%;
+      left: YGetY()%;
     }
   </style>
 </head>
